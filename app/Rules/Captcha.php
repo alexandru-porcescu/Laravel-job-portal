@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Rules;
-use ReCaptcha\ReCaptcha;
+
 
 use Illuminate\Contracts\Validation\Rule;
+use ReCaptcha\ReCaptcha;
 
 class Captcha implements Rule
 {
@@ -38,6 +39,6 @@ class Captcha implements Rule
      */
     public function message()
     {
-        return 'Are You a Robot?';
+        return 'Please verify that you are not a robot';
     }
 }

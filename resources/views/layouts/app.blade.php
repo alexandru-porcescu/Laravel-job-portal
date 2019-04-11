@@ -53,7 +53,7 @@ if (!isset($seo)) {
 
 <!-- Custom js --> 
 <script src="{{asset('/')}}js/script.js"></script> 
-<script src='https://www.google.com/recaptcha/api/js'></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="{{ asset('/') }}admin_assets/global/plugins/jquery.scrollTo.min.js" type="text/javascript"></script> 
  @stack('scripts') 
 <script type="text/JavaScript">

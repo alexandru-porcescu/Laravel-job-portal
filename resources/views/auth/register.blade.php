@@ -90,9 +90,12 @@
                   @if ($errors->has('terms_of_use')) <span class="help-block"> <strong>{{ $errors->first('terms_of_use') }}</strong> </span> @endif </div>
                   <div>
                     <div class="g-recaptcha" data-sitekey={{env('CAPTCHA_KEY')}}></div>
-                    @if ($errors->has('g-recaptcha-response')) <span class="help-block"> <strong>{{ $errors->first('g-recaptcha-response') }}</strong> </span> @endif
+                    @if($errors->has('g-recaptcha-response'))
+                      <span class="invalid-feedback" style="display:block">
+                        <strong>{{$errors->first('g-recaptcha-response')}}</strong>
+                      </span>
+                    @endif
                   </div>
-                  <div style="display:none" class="formrow{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}"> {!! app('captcha')->display() !!}</div>
                    <input type="submit" class="btn" value="{{__('Register')}}">
               </form>
             </div>

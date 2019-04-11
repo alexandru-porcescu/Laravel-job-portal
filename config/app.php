@@ -220,7 +220,7 @@ return [
         'ImgUploader' => App\Helpers\ImageUploadingHelper::class,
         'APAuthHelp' => App\Helpers\AdminAuthorizationHelper::class,
         'MiscHelper' => App\Helpers\MiscHelper::class,
-         'UserVerification' => Jrean\UserVerification\Facades\UserVerification::class,
+        'UserVerification' => Jrean\UserVerification\Facades\UserVerification::class,
        
     ],
 ];

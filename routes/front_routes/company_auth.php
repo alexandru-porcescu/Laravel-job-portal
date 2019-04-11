@@ -9,7 +9,8 @@ Route::prefix('company')->name('company.')->group(function () {
 	
 	// Registration Routes...
     Route::get('/register', 'Company\Auth\RegisterController@showRegistrationForm')->name('register');
-    Route::get('/register', 'Company\Auth\RegisterController@showRegistrationFormFreelancer')->name('register');
+    Route::post('/register', 'Company\Auth\RegisterController@register');
+    // Route::get('/register', 'Company\Auth\RegisterController@showRegistrationFormFreelancer')->name('register');
  
     // Route::get('/recruiterregister', 'Company\Auth\RegisterController@showRegistrationFormRecruiter')->name('recruiterregister');
     

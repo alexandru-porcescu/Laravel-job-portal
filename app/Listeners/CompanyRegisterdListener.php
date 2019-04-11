@@ -29,6 +29,6 @@ class CompanyRegisterdListener implements ShouldQueue
      */
     public function handle(CompanyRegistered $event)
     {
-		Mail::send(new CompanyRegisteredMailable($event->company));
+		// Mail::send(new CompanyRegisteredMailable($event->company));
     }
 }
