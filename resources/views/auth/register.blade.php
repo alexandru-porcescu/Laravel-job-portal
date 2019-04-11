@@ -106,4 +106,5 @@
     </div>
   </div>
 </div>
-@include('inc
+@include('includes.footer')
+@endsection 
