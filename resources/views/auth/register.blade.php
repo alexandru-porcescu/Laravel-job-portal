@@ -30,7 +30,7 @@
               <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                 {{ csrf_field() }}
                 <input type="hidden" name="candidate_or_employer" value="candidate" />
-                <div class="formrow{{ $errors->has('first_name') ? ' has-error' : '' }}">
+                <!-- <div class="formrow{{ $errors->has('first_name') ? ' has-error' : '' }}">
                   <input type="text" name="first_name" class="form-control" required="required" placeholder="{{__('First Name')}}" value="{{old('first_name')}}">
                   @if ($errors->has('first_name')) <span class="help-block"> <strong>{{ $errors->first('first_name') }}</strong> </span> @endif </div>
                 <div class="formrow{{ $errors->has('middle_name') ? ' has-error' : '' }}">
@@ -38,7 +38,7 @@
                   @if ($errors->has('middle_name')) <span class="help-block"> <strong>{{ $errors->first('middle_name') }}</strong> </span> @endif </div>
                 <div class="formrow{{ $errors->has('last_name') ? ' has-error' : '' }}">
                   <input type="text" name="last_name" class="form-control" required="required" placeholder="{{__('Last Name')}}" value="{{old('last_name')}}">
-                  @if ($errors->has('last_name')) <span class="help-block"> <strong>{{ $errors->first('last_name') }}</strong> </span> @endif </div>
+                  @if ($errors->has('last_name')) <span class="help-block"> <strong>{{ $errors->first('last_name') }}</strong> </span> @endif </div> -->
                 <div class="formrow{{ $errors->has('email') ? ' has-error' : '' }}">
                   <input type="email" name="email" class="form-control" required="required" placeholder="{{__('Email')}}" value="{{old('email')}}">
                   @if ($errors->has('email')) <span class="help-block"> <strong>{{ $errors->first('email') }}</strong> </span> @endif </div>
@@ -71,9 +71,9 @@
               <form class="form-horizontal" method="POST" action="{{ route('company.register') }}">
                 {{ csrf_field() }}
                 <input type="hidden" name="candidate_or_employer" value="employer" />
-                <div class="formrow{{ $errors->has('name') ? ' has-error' : '' }}">
+                <!-- <div class="formrow{{ $errors->has('name') ? ' has-error' : '' }}">
                   <input type="text" name="name" class="form-control" required="required" placeholder="{{__('Name')}}" value="{{old('name')}}">
-                  @if ($errors->has('name')) <span class="help-block"> <strong>{{ $errors->first('name') }}</strong> </span> @endif </div>
+                  @if ($errors->has('name')) <span class="help-block"> <strong>{{ $errors->first('name') }}</strong> </span> @endif </div> -->
                 <div class="formrow{{ $errors->has('email') ? ' has-error' : '' }}">
                   <input type="email" name="email" class="form-control" required="required" placeholder="{{__('Email')}}" value="{{old('email')}}">
                   @if ($errors->has('email')) <span class="help-block"> <strong>{{ $errors->first('email') }}</strong> </span> @endif </div>

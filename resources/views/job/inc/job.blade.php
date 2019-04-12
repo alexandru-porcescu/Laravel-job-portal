@@ -11,7 +11,7 @@
       {!! APFrmErrHelp::showErrors($errors, 'title') !!} </div>
   </div>
   <div class="col-md-12">
-    <div class="formrow {!! APFrmErrHelp::hasError($errors, 'description') !!}"> {!! Form::textarea('description', null, array('class'=>'form-control', 'id'=>'description', 'placeholder'=>__('Job description'))) !!}
+    <div class="formrow {!! APFrmErrHelp::hasError($errors, 'description') !!}"> {!! Form::textarea('description', null, array('class'=>'form-control', 'id'=>' ', 'placeholder'=>__('Job description'))) !!}
       {!! APFrmErrHelp::showErrors($errors, 'description') !!} </div>
   </div>
   <div class="col-md-12">
@@ -19,6 +19,7 @@
       <?php
         $skills = old('skills', $jobSkillIds);
 		?>
+       
       {!! Form::select('skills[]', $jobSkills, $skills, array('class'=>'form-control select2-multiple', 'id'=>'skills', 'multiple'=>'multiple')) !!}
       {!! APFrmErrHelp::showErrors($errors, 'skills') !!} </div>
   </div>
@@ -153,7 +154,38 @@ $(document).ready(function() {
     $('.select2-multiple').select2({
     	placeholder: "{{__('Select Required Skills')}}",
     	allowClear: true
-	});
+	  });
+    
+    //limt skill set
+    // $('#skills').change(function() 
+    // {
+    //     var items = $(this).val();
+    //     if (items.length > 1) {
+    //           alert("You can only select 3 values at a time");
+    //           $('.selection').css('color','red');
+    //         $("#siklls option:eq(1)").remove();
+
+    //     }
+    // });
+    var lastOpt;
+    $('#skills option').click(function () {
+        lastOpt = $(this).index();
+    });
+    $('#skills').change(function () {
+        if ($('option:selected', this).length > 5) {
+          $('.selection').css('color','red');
+            $('#skill option:eq(' + lastOpt + ')', this).removeAttr('selected');
+            
+
+        }
+    });
+
+    // $('#skills').change(function(){
+    //   alert('123');
+    // })
+
+   
+
 	$(".datepicker").datepicker({
 		autoclose: true,
 		format:'yyyy-m-d'	

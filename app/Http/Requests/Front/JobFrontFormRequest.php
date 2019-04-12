@@ -33,7 +33,7 @@ class JobFrontFormRequest extends Request
                     return [                    	
 						"title" => "required|max:180",
 						"description" => "required",
-						"skills" => "required",
+						"skills" => "required|min:5",
 						"country_id" => "required",
 						"state_id" => "required",
 						//"city_id" => "required",
@@ -49,7 +49,7 @@ class JobFrontFormRequest extends Request
 						//"job_shift_id" => "required",
 						//"num_of_positions" => "required",
 						//"gender_id" => "required",
-						//"expiry_date" => "required",
+						"expiry_date" => "required",
 						//"degree_level_id" => "required",
 						//"job_experience_id" => "required",
                     ];
