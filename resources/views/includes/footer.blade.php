@@ -151,10 +151,10 @@
   <div class="container">
 	<div class="row">
 		<div class="col-md-8">
-			<div class="bttxt">{{__('Copyright')}} &copy; {{date('Y')}} {{ $siteSetting->site_name }}. {{__('All Rights Reserved')}}. {{__('Design by')}}: <a href="{{url('/')}}http://graphicriver.net/user/ecreativesol" target="_blank">Mattias Longaa</a></div>
+			<div class="bttxt">{{__('Copyright')}} &copy; {{date('Y')}} {{ $siteSetting->site_name }}. {{__('All Rights Reserved')}}.</div>
 		</div>
 		<div class="col-md-4">
-			<div class="paylogos"><img src="{{asset('/')}}images/payment-icons.png" alt="" /></div>	
+			<!-- <div class="paylogos"><img src="{{asset('/')}}images/payment-icons.png" alt="" /></div>	 -->
 		</div>
 	</div>
     

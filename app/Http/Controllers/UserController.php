@@ -70,7 +70,7 @@ class UserController extends Controller
 		
 		$user = User::findOrFail($id);
 		$profileCv = $user->getDefaultCv();
-				
+    
 		return view('user.applicant_profile')
                         ->with('user', $user)
                         ->with('profileCv', $profileCv)
@@ -107,8 +107,9 @@ class UserController extends Controller
 
     public function updateMyProfile(UserFrontFormRequest $request)
     {
-
+        
         $user = User::findOrFail(Auth::user()->id);
+        
         /*         * **************************************** */
         if ($request->hasFile('image')) {
             $is_deleted = $this->deleteUserImage($user->id);
@@ -119,7 +120,7 @@ class UserController extends Controller
         /*         * ************************************** */
 
         $user->first_name = $request->input('first_name');
-        $user->middle_name = $request->input('middle_name');
+        // $user->middle_name = $request->input('middle_name');
         $user->last_name = $request->input('last_name');
 		/**************************/
 		$user->name = $user->getName();
@@ -130,24 +131,24 @@ class UserController extends Controller
             $user->password = Hash::make($request->input('password'));
         }
 
-        $user->father_name = $request->input('father_name');
-        $user->date_of_birth = $request->input('date_of_birth');
-        $user->gender_id = $request->input('gender_id');
-        $user->marital_status_id = $request->input('marital_status_id');
-        $user->nationality_id = $request->input('nationality_id');
-        $user->national_id_card_number = $request->input('national_id_card_number');
-        $user->country_id = $request->input('country_id');
-        $user->state_id = $request->input('state_id');
-        $user->city_id = $request->input('city_id');
+        // $user->father_name = $request->input('father_name');
+        // $user->date_of_birth = $request->input('date_of_birth');
+        // $user->gender_id = $request->input('gender_id');
+        // $user->marital_status_id = $request->input('marital_status_id');
+        // $user->nationality_id = $request->input('nationality_id');
+        // $user->national_id_card_number = $request->input('national_id_card_number');
+        // $user->country_id = $request->input('country_id');
+        // $user->state_id = $request->input('state_id');
+        // $user->city_id = $request->input('city_id');
         $user->phone = $request->input('phone');
-        $user->mobile_num = $request->input('mobile_num');
-        $user->job_experience_id = $request->input('job_experience_id');
-        $user->career_level_id = $request->input('career_level_id');
-        $user->industry_id = $request->input('industry_id');
-        $user->functional_area_id = $request->input('functional_area_id');
-        $user->current_salary = $request->input('current_salary');
-        $user->expected_salary = $request->input('expected_salary');
-        $user->salary_currency = $request->input('salary_currency');
+        // $user->mobile_num = $request->input('mobile_num');
+        // $user->job_experience_id = $request->input('job_experience_id');
+        // $user->career_level_id = $request->input('career_level_id');
+        // $user->industry_id = $request->input('industry_id');
+        // $user->functional_area_id = $request->input('functional_area_id');
+        // $user->current_salary = $request->input('current_salary');
+        // $user->expected_salary = $request->input('expected_salary');
+        // $user->salary_currency = $request->input('salary_currency');
         $user->street_address = $request->input('street_address');
 		
         $user->update();

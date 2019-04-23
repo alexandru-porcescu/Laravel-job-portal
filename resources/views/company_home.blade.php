@@ -4,9 +4,18 @@
 <!-- Header start --> 
 @include('includes.header') 
 <!-- Header end --> 
-
+<style>
+  .listpgWraper .container{
+    background-color: #ededed;
+    padding:2%;
+    box-shadow: 1px 3px 5px 1px grey;
+    /* background-color: white; */
+  }
+</style>
 <!-- Inner Page Title start --> 
-@include('includes.inner_page_title', ['page_title'=>__('Dashboard')]) 
+
+<!-- change code -->
+<!-- @include('includes.inner_page_title', ['page_title'=>__('Dashboard')])  -->
 <!-- Inner Page Title end -->
 
 <div class="listpgWraper">
@@ -35,7 +44,7 @@
     </div>
   </div>
 </div>
-@include('includes.footer')
+@include('includes.dashboard_footer')
 @endsection
 @push('scripts')
 @include('includes.immediate_available_btn')

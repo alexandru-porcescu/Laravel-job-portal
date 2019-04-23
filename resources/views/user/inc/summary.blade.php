@@ -8,7 +8,7 @@
                     <div class="formrow {!! APFrmErrHelp::hasError($errors, 'summary') !!}">
                       <textarea name="summary" class="form-control" id="summary" placeholder="{{__('Profile Summary')}}">{{ old('summary', $user->getProfileSummary('summary')) }}</textarea>
                       <span class="help-block summary-error"></span> </div>
-                    <button type="button" class="btn btn-large btn-primary" onClick="submitProfileSummaryForm();">{{__('Update Summary')}} <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+                    <button type="button" class="btn btn-large btn-primary" style="border-radius:0.3em" onClick="submitProfileSummaryForm();">{{__('Update Summary')}} <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
                   </div>
                 </form>
               </div>

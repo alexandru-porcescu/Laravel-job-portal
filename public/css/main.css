@@ -3303,36 +3303,42 @@ blockquote:after {
 *************************************************/
 
 .usernavdash {
+	
 	margin-bottom: 30px;
 }
+.usernavdash li{
+	padding-top:10px
+}
 .usernavdash li a {
+	width:100%;
+ 	 
 	border: 1px solid #eee;
 	border-bottom: none;
-	padding: 10px 15px;
-	color: #444;
-	display: block;
-	background: #fff
+	/* padding: 10px 15px; */
+	/* color: #444; */
+	/* display: block; */
+	/* background: #4bdda7; */
 }
 .usernavdash li:last-child a {
 	border-bottom: 1px solid #eee;
 }
 .usernavdash li a:hover {
-	background: #18a7ff;
-	color: #fff;
+	background-color: green;
+	color: rgba(255, 255, 255 );
 	text-decoration: none;
 }
 .usernavdash li i {
 	margin-right: 2px;
 	font-size: 18px;
 	width: 25px;
-	color: #999;
+	/* color: #999; */
 }
 .usernavdash li.active a {
-	background: #18a7ff;
-	color: #fff;
+	background: #e7f5ff;
+	color: #000;
 }
 .usernavdash li.active a i, .usernavdash li a:hover i {
-	color: #fff;
+	/* color: #fff; */
 }
 .profilestat li .inbox {
 	border: 1px solid #eee;

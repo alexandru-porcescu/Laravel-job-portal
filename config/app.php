@@ -161,6 +161,8 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         Yajra\DataTables\DataTablesServiceProvider::class,
         App\Providers\CustomConfigServiceProvider::class,
+        //dropbox provider
+        // BC\Laravel\DropboxDriver\ServiceProvider::class,
       
         
          

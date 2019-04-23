@@ -14,7 +14,7 @@
 
 <!-- Inner Page Title start -->
 
-@include('includes.inner_page_title', ['page_title'=>__('Favourite Jobs')])
+<!-- @include('includes.inner_page_title', ['page_title'=>__('Favourite Jobs')]) -->
 
 <!-- Inner Page Title end -->
 
@@ -26,15 +26,15 @@
 
     <div class="row">
 
-      @include('includes.user_dashboard_menu')
+      <!-- @include('includes.user_dashboard_menu') -->
 
       
 
-      <div class="col-md-9 col-sm-8"> 
+      <div class="col-md-12 col-sm-12"> 
 
         <div class="myads">
 
-          <h3>{{__('Favourite Jobs')}}</h3>
+          <h2>{{__('Favourite Jobs')}}</h2>
 
           <ul class="searchList">
 

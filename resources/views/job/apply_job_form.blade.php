@@ -6,7 +6,7 @@
 <!-- Header end --> 
 
 <!-- Inner Page Title start --> 
-@include('includes.inner_page_title', ['page_title'=>__('Apply on Job')]) 
+<!-- @include('includes.inner_page_title', ['page_title'=>__('Apply on Job')])  -->
 <!-- Inner Page Title end -->
 
 <div class="listpgWraper">

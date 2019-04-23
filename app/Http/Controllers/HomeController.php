@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use Auth;
+use DB;
 
 class HomeController extends Controller
 {
@@ -24,7 +27,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $id = Auth::user()->id;
+        $user = User::findOrFail($id);
+		$profileCv = $user->getDefaultCv();
+    
+                         
+        return view('home')
+        ->with('user', $user)
+                        ->with('profileCv', $profileCv)
+						->with('page_title', $user->getName())
+						->with('form_title', 'Contact '.$user->getName());
     }
 
 }

@@ -89,3 +89,5 @@ Route::get('recruiterlogin', function(){
   $type = 'recruiter';
     return view('auth.login', compact('type'));
 })->name('recruiterlogin');
+
+Route::get('/upload-to-dropbox', 'DropboxController@uploadToDropbox');

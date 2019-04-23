@@ -6,7 +6,7 @@
 <!-- Header end --> 
 
 <!-- Inner Page Title start --> 
-@include('includes.inner_page_title', ['page_title'=>__('My Messages')]) 
+<!-- @include('includes.inner_page_title', ['page_title'=>__('My Messages')])  -->
 <!-- Inner Page Title end -->
 
 <div class="listpgWraper">
@@ -14,7 +14,7 @@
   <div class="row"> @include('includes.user_dashboard_menu')
     <div class="col-md-9 col-sm-8">
       <div class="myads">
-        <h3>{{__('My Messages')}}</h3>
+        <h2>{{__('My Messages')}}</h2>
         <div class="panel-group"> 
           <!-- job start --> 
           @if(isset($message))

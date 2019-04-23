@@ -17,6 +17,25 @@
         
         <div class="navbar navbar-default" role="navigation">
           <div class="navbar-collapse collapse" id="nav-main">
+            @if(Auth::check())
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="{{ route('my.job.applications') }}" style=" ">{{__('My Job Applications')}}</a>
+
+              </li>
+            </ul>
+            <ul class="nav navbar-nav">
+              <li class=" ">
+                <a href="{{ route('view.public.profile', Auth::user()->id) }}" style=" ">{{__('My Profile')}}</a>
+              </li>
+            </ul>
+             
+            <!-- <ul class="nav navbar-nav">
+              <li class=" ">
+                <a href="" style=" ">Application</a>
+              </li>
+            </ul> -->
+            @endif
             <ul class="nav navbar-nav">
               <!-- <li class="{{ Request::url() == route('index') ? 'active' : '' }}"><a href="{{url('/')}}">{{__('Home')}}</a> </li>
               @foreach($show_in_top_menu as $top_menu) @php $cmsContent = App\CmsContent::getContentBySlug($top_menu->page_slug); @endphp
@@ -37,7 +56,7 @@
                 </ul>
               </li>
               @endif @if(Auth::guard('company')->check())
-              <li class="postjob"><a href="{{route('post.job')}}">{{__('Post a job')}}</a> </li>
+              <li class="postjob"><a style="border-radius:0.5em;  " href="{{route('post.job')}}">{{__('Post a job')}}</a> </li>
               <li class="dropdown userbtn"><a href="">{{Auth::guard('company')->user()->printCompanyImage()}}</a>
                 <ul class="dropdown-menu">
                   <li><a href="{{route('company.home')}}"><i class="fa fa-tachometer" aria-hidden="true"></i> {{__('Dashboard')}}</a> </li>

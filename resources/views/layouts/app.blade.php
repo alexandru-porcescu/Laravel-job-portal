@@ -24,6 +24,8 @@ if (!isset($seo)) {
 <link href="{{asset('/')}}css/font-awesome.css" rel="stylesheet">
 <!-- Custom Style -->
 <link href="{{asset('/')}}css/main.css" rel="stylesheet">
+
+<!-- <link href="{{asset('/')}}css/style.css" rel="stylesheet"> -->
 @if((session('localeDir', 'ltr') == 'rtl'))
 <!-- Rtl Style -->
 <link href="{{asset('/')}}css/rtl-style.css" rel="stylesheet">
@@ -32,6 +34,8 @@ if (!isset($seo)) {
 <link href="{{ asset('/') }}admin_assets/global/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
 <link href="{{ asset('/') }}admin_assets/global/plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css" />
 
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<link href="{{asset('/')}}css/tox-progress.css" rel="stylesheet">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
   <script src="{{asset('/')}}js/html5shiv.min.js"></script>
@@ -42,7 +46,9 @@ if (!isset($seo)) {
 <body>
 @yield('content') 
 <!-- Bootstrap's JavaScript --> 
+
 <script src="{{asset('/')}}js/jquery-2.1.4.min.js"></script> 
+<script src="{{asset('/')}}js/tox-progress.js"></script> 
 <script src="{{asset('/')}}js/bootstrap.min.js"></script> 
 <!-- Owl carousel --> 
 <script src="{{asset('/')}}js/owl.carousel.js"></script> 
@@ -59,11 +65,19 @@ if (!isset($seo)) {
 <script type="text/JavaScript">
 	$(document).ready(function(){
 	$(document).scrollTo('.has-error', 2000);
+		ToxProgress.create();
+		ToxProgress.animate();
+	 
+	$('#reset-button').click(function(){
+		ToxProgress.create();
+                ToxProgress.animate();
+	});
 	});
 	function showProcessingForm(btn_id){		
 	$("#"+btn_id).val( 'Processing .....' );
 	$("#"+btn_id).attr('disabled','disabled');		
 	}
 </script>
+ 
 </body>
 </html>
