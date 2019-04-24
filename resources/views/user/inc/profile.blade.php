@@ -5,7 +5,7 @@
               <div class="col-md-3">
                 <div class="formrow"> {{ ImgUploader::print_image("user_images/$user->image", 200, 200) }} </div>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-5">
                 <div class="formrow">
                   <div id="thumbnail"></div>
                   <label class="btn btn-default" style="border-radius:0.3em"> {{__('Select Profile Image')}}

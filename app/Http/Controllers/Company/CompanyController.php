@@ -53,7 +53,9 @@ class CompanyController extends Controller
 
     public function index()
     {
-        return view('company_home');
+        $company = Company::findOrFail(Auth::guard('company')->user()->id);
+        return view('company_home')
+                ->with('company', $company);
     }
 	
 	public function companyProfile()

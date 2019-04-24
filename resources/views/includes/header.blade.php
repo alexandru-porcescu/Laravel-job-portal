@@ -56,8 +56,11 @@
                 </ul>
               </li>
               @endif @if(Auth::guard('company')->check())
-              <li class="postjob"><a style="border-radius:0.5em;  " href="{{route('post.job')}}">{{__('Post a job')}}</a> </li>
-              <li class="dropdown userbtn"><a href="">{{Auth::guard('company')->user()->printCompanyImage()}}</a>
+       
+             <li><a href="{{route('company.messages')}}"><i  style="font-size:150%"  class="fa fa-envelope-o" aria-hidden="true"></i>  </a></li>
+              <li><a href="{{route('company.followers')}}"> <i style="font-size:150%" class="fa fa-user-circle-o" aria-hidden="true"></i>  </a></li>
+              <li><a href="{{ route('post.job') }}"><i style="font-size:150%" class="fa fa-desktop" aria-hidden="true"></i> </a></li>
+               <li class="dropdown userbtn"><a href="">{{Auth::guard('company')->user()->printCompanyImage()}}</a>
                 <ul class="dropdown-menu">
                   <li><a href="{{route('company.home')}}"><i class="fa fa-tachometer" aria-hidden="true"></i> {{__('Dashboard')}}</a> </li>
                   <li><a href="{{ route('company.profile') }}"><i class="fa fa-user" aria-hidden="true"></i> {{__('Company Profile')}}</a></li>

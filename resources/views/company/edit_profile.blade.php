@@ -6,15 +6,15 @@
 <!-- Header end --> 
 
 <!-- Inner Page Title start --> 
-@include('includes.inner_page_title', ['page_title'=>__('Company Profile')]) 
+<!-- @include('includes.inner_page_title', ['page_title'=>__('Company Profile')])  -->
 <!-- Inner Page Title end -->
 
 <div class="listpgWraper">
   <div class="container">
     <div class="row">
-      @include('includes.company_dashboard_menu')
+      <!-- @include('includes.company_dashboard_menu') -->
       
-      <div class="col-md-9 col-sm-8"> 
+      <div class="col-md-12 col-sm-12"> 
         <div class="row">
       <div class="col-md-12">
         <div class="userccount">

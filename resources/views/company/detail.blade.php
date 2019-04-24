@@ -14,7 +14,7 @@
 
 <!-- Inner Page Title start --> 
 
-@include('includes.inner_page_title', ['page_title'=>__('Company Detail')]) 
+<!-- @include('includes.inner_page_title', ['page_title'=>__('Company Detail')])  -->
 
 <!-- Inner Page Title end -->
 

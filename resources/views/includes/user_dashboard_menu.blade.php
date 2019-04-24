@@ -76,8 +76,7 @@
 				{{Auth::user()->printUserImage()}}
                 </div>
             </div>
-            <!-- <p style="font-family:'Josefin Sans', sans-serif;font-size: 1.4em;padding-top:10px;font-weight:700" class="text-center"  >Profile {{$i}}% </p> -->
-			<div style="text-align:center">
+ 			<div style="text-align:center">
 			<button id="reset-button" style="font-family:'Josefin Sans', sans-serif;font-size: 1.4em;margin-top:10px;font-weight:700; " class="btn btn-success" style="padding: 5px 20px"> Your Profile {{$i}}% </button>
 			</div>
 		</div>

@@ -4,14 +4,7 @@
 <!-- Header start --> 
 @include('includes.header') 
 <!-- Header end --> 
-<style>
-  .listpgWraper .container{
-    background-color: #ededed;
-    padding:2%;
-    box-shadow: 1px 3px 5px 1px grey;
-    /* background-color: white; */
-  }
-</style>
+
 <!-- Inner Page Title start --> 
 
 <!-- change code -->
@@ -21,7 +14,8 @@
 <div class="listpgWraper">
   <div class="container">@include('flash::message')
     <div class="row"> @include('includes.company_dashboard_menu')
-      <div class="col-md-9 col-sm-8"> @include('includes.company_dashboard_stats')
+      <div class="col-md-9 col-sm-8">
+       <!-- @include('includes.company_dashboard_stats') -->
         
         
         @php
