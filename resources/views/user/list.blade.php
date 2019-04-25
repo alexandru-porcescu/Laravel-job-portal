@@ -6,9 +6,13 @@
 <!-- Header end --> 
 
 <!-- Inner Page Title start --> 
-@include('includes.inner_page_title', ['page_title'=>__('Job Seekers')]) 
+<!-- @include('includes.inner_page_title', ['page_title'=>__('Job Seekers')])  -->
 <!-- Inner Page Title end -->
-
+<style>
+ .search_field{
+   border-radius:0.5em!important;
+ }
+</style>
 <div class="listpgWraper">
   <div class="container">
   @include('flash::message')
@@ -18,9 +22,9 @@
         <div class="row">
           <div class="col-md-3">
           @if(Auth::guard('company')->check())
-          <a href="{{ route('post.job') }}" class="btn"><i class="fa fa-file-text" aria-hidden="true"></i> {{__('Post Job')}}</a>
+          <a href="{{ route('post.job') }}" style="border-radius:0.5em" class="btn"><i class="fa fa-file-text" aria-hidden="true"></i> {{__('Post Job')}}</a>
           @else
-          <a href="{{url('my-profile#cvs')}}" class="btn"><i class="fa fa-file-text" aria-hidden="true"></i> {{__('Upload Your Resume')}}</a>
+          <a href="{{url('my-profile#cvs')}}" style="border-radius:0.5em" class="btn"><i class="fa fa-file-text" aria-hidden="true"></i> {{__('Upload Your Resume')}}</a>
           @endif
           
           </div>
@@ -28,31 +32,31 @@
             <div class="searchform">
               <div class="row">
                 <div class="col-md-{{((bool)$siteSetting->country_specific_site)? 5:3}}">
-                  <input type="text" name="search" value="{{Request::get('search', '')}}" class="form-control" placeholder="{{__('Enter Skills or job seeker details')}}" />
+                  <input style="border-radius:0.5em" type="text" name="search" value="{{Request::get('search', '')}}" class="form-control" placeholder="{{__('Enter Skills or job seeker details')}}" />
                 </div>
-                <div class="col-md-2"> {!! Form::select('functional_area_id[]', ['' => __('Select Functional Area')]+$functionalAreas, Request::get('functional_area_id', null), array('class'=>'form-control', 'id'=>'functional_area_id')) !!} </div>
+                <!-- <div class="col-md-2"> {!! Form::select('functional_area_id[]', ['' => __('Select Functional Area')]+$functionalAreas, Request::get('functional_area_id', null), array('class'=>'form-control', 'id'=>'functional_area_id')) !!} </div> -->
                 
                 
                 @if((bool)$siteSetting->country_specific_site)
                 {!! Form::hidden('country_id[]', Request::get('country_id[]', $siteSetting->default_country_id), array('id'=>'country_id')) !!}
                 @else
-                <div class="col-md-2">
-                {!! Form::select('country_id[]', ['' => __('Select Country')]+$countries, Request::get('country_id', $siteSetting->default_country_id), array('class'=>'form-control', 'id'=>'country_id')) !!}
+                <div class="col-md-3" >
+                {!! Form::select('country_id[]', ['' => __('Select Country')]+$countries, Request::get('country_id', $siteSetting->default_country_id), array('class'=>'form-control search_field',  'id'=>'country_id')) !!}
                 </div>
                 @endif
                 
-                <div class="col-md-2">
+                <div class="col-md-3">
                 <span id="state_dd">
-                {!! Form::select('state_id[]', ['' => __('Select State')], Request::get('state_id', null), array('class'=>'form-control', 'id'=>'state_id')) !!}
+                {!! Form::select('state_id[]', ['' => __('Select State')], Request::get('state_id', null), array('class'=>'form-control search_field', 'id'=>'state_id')) !!}
                 </span>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3">
                 <span id="city_dd">
-                {!! Form::select('city_id[]', ['' => __('Select City')], Request::get('city_id', null), array('class'=>'form-control', 'id'=>'city_id')) !!}
+                {!! Form::select('city_id[]', ['' => __('Select City')], Request::get('city_id', null), array('class'=>'form-control search_field', 'id'=>'city_id')) !!}
                 </span>
                 </div>
                 <div class="col-md-1">
-                  <button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+                  <button type="submit" class="btn"><i class="fa fa-search search_field" aria-hidden="true"></i></button>
                 </div>
               </div>
             </div>
@@ -64,13 +68,7 @@
     <form action="{{route('job.seeker.list')}}" method="get">
       <!-- Search Result and sidebar start -->
       <div class="row"> @include('includes.job_seeker_list_side_bar')
-        <div class="col-md-3 col-sm-6 pull-right">
-          <!-- Sponsord By -->
-          <div class="sidebar">
-            <h4 class="widget-title">{{__('Sponsord By')}}</h4>
-            <div class="gad">{!! $siteSetting->listing_page_vertical_ad !!}</div>
-          </div>
-        </div>
+         
         <div class="col-md-6 col-sm-12"> 
           <!-- Search List -->
           <ul class="searchList">
@@ -79,7 +77,7 @@
             @foreach($jobSeekers as $jobSeeker)
             <li>
             <div class="row">
-              <div class="col-md-9 col-sm-9">
+              <div class="col-md-12 col-sm-12">
                 <div class="jobimg">{{$jobSeeker->printUserImage(100, 100)}}</div>
                 <div class="jobinfo">
                   <h3><a href="{{route('user.profile', $jobSeeker->id)}}">{{$jobSeeker->getName()}}</a></h3>
@@ -114,7 +112,7 @@
             </div>
           </div>
           <!-- Pagination end --> 
-          <div class=""><br />{!! $siteSetting->listing_page_horizontal_ad !!}</div>
+          <!-- <div class=""><br />{!! $siteSetting->listing_page_horizontal_ad !!}</div> -->
                 
         </div>
       </div>

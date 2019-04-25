@@ -21,10 +21,7 @@
 <div class="col-md-3 col-sm-4">
     <ul class="usernavdash">
       <li><a href="{{ route('company.detail', Auth::guard('company')->user()->slug) }}">
-        <h2 style="text-align:center; color:black">
-        @if(isset($company))
-        {{$company->name}}</h2>
-        @endif
+       
       
       <?php
 			$i = 0 ;
@@ -57,19 +54,19 @@
         
 		  </div>
       </a></li>
+      <h2 style="text-align:center; color:black">
+        @if(isset($company))
+        {{$company->name}}</h2>
+        @endif
       <div style="text-align:center">
-        <strong id="reset-button" style="font-family:'Josefin Sans', sans-serif;font-size: 1.4em;color:red;margin-top:10px;font-weight:700; " class="percentage" style="padding: 5px 20px">   {{$i}}% </strong>
+        <strong id="reset-button" style="font-family:'Josefin Sans', sans-serif;font-size: 1.4em; margin-top:10px;font-weight:700; " class="percentage" style="padding: 5px 20px">   {{$i}}% </strong>
         </div>
-      <!-- <li><a href="{{ route('company.profile') }}"><i class="fa fa-user" aria-hidden="true"></i> {{__('Company Profile')}}</a></li>
-      <li><a href="{{ route('company.detail', Auth::guard('company')->user()->slug) }}"><i class="fa fa-user" aria-hidden="true"></i> {{__('Company Public Profile')}}</a></li>
-      <li><a href="{{ route('post.job') }}"><i class="fa fa-desktop" aria-hidden="true"></i> {{__('Post Job')}}</a></li>
-      <li><a href="{{ route('posted.jobs') }}"><i class="fa fa-desktop" aria-hidden="true"></i> {{__('Company Jobs')}}</a></li>
-      
-      <li><a href="{{route('company.messages')}}"><i class="fa fa-envelope-o" aria-hidden="true"></i> {{__('Company Messages')}}</a></li>
-      <li><a href="{{route('company.followers')}}"><i class="fa fa-user-o" aria-hidden="true"></i> {{__('Company Followers')}}</a></li>
-      <li><a href="{{ route('company.logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out" aria-hidden="true"></i> {{__('Logout')}}</a>
+      <li><a class="btn btn-info" href="{{ route('company.profile') }}"><i class="fa fa-user" aria-hidden="true"></i> {{__('Company Profile')}}</a></li>
+       <li><a href="{{ route('post.job') }}" class="btn btn-info"><i class="fa fa-desktop"  aria-hidden="true"></i> {{__('Post Job')}}</a></li>
+       
+        <li><a href="{{ route('company.logout') }}" class="btn btn-info" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out" aria-hidden="true"></i> {{__('Logout')}}</a>
       <form id="logout-form" action="{{ route('company.logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
-      </li> -->
+      </li>
     </ul>
     <div class="row">
     </div>

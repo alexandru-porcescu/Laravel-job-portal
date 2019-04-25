@@ -14,7 +14,7 @@
 
 <!-- Inner Page Title start -->
 
-@include('includes.inner_page_title', ['page_title'=>__('Company Posted Jobs')])
+<!-- @include('includes.inner_page_title', ['page_title'=>__('Company Posted Jobs')]) -->
 
 <!-- Inner Page Title end -->
 
@@ -26,11 +26,11 @@
 
     <div class="row">
 
-      @include('includes.company_dashboard_menu')
+      <!-- @include('includes.company_dashboard_menu') -->
 
       
 
-      <div class="col-md-9 col-sm-8"> 
+      <div class="col-md-12 col-sm-12"> 
 
         <div class="myads">
 

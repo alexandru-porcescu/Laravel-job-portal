@@ -2,6 +2,11 @@
   .form-control{
     border-radius: 10px!important;
   }
+  .searchwrap{
+    background-color: #1ec2dc59;
+    padding: 1px 0;
+    border-radius: 0.5em;
+  }
 </style>
 <div class="searchwrap">
 
@@ -17,9 +22,9 @@
 
     <div class="searchbar row">
 
-      <div class="col-md-3" style="padding:0 10px">
+      <div class="col-md-2" style="padding:0 10px">
 
-        <input type="text"  name="search" value="{{Request::get('search', '')}}" class="form-control" placeholder="{{__('Enter Skills or Job Seeker Details')}}" />
+        <input type="text"  name="search" value="{{Request::get('search', '')}}" class="form-control" placeholder="{{__('Freelancer Details')}}" />
 
       </div>
  
@@ -30,7 +35,7 @@
 
       @else
 
-      <div class="col-md-3" style="padding:0 10px">
+      <div class="col-md-2" style="padding:0 10px">
 
       {!! Form::select('country_id[]', ['' => __('Select Country')]+$countries, Request::get('country_id', $siteSetting->default_country_id), array('class'=>'form-control', 'id'=>'country_id')) !!}
 
@@ -40,7 +45,7 @@
 
       
 
-      <div class="col-md-3" style="padding:0 10px">
+      <div class="col-md-2" style="padding:0 10px">
 
       <span id="state_dd">
 
@@ -50,7 +55,7 @@
 
       </div>
 
-      <!-- <div class="col-md-3">
+      <div class="col-md-2">
 
       <span id="city_dd">
 
@@ -58,11 +63,11 @@
 
       </span>
 
-      </div> -->
+      </div>
 
-      <div class="col-md-3" style="padding:0 10px">
+      <div class="col-md-2" style="padding:0 10px">
 
-        <input type="submit" style="border-radius:0.5em" class="btn" value="{{__('Search Job Seeker')}}">
+        <input type="submit" style="border-radius:0.5em" class="btn" value="{{__('Search')}}">
 
       </div>
 

@@ -15,9 +15,14 @@
   <div class="container">@include('flash::message')
     <div class="row"> @include('includes.company_dashboard_menu')
       <div class="col-md-9 col-sm-8">
+        @include('includes.searchbar')
        <!-- @include('includes.company_dashboard_stats') -->
-        
-        
+        <style>
+          .instoretxt{
+            background:none;
+          }
+        </style>
+        <div style="padding-top:30%; background:none">
         @php
         $packages = App\Package::where('package_for', 'like', 'employer')->get();
         $package = Auth::guard('company')->user()->getPackage();
@@ -35,6 +40,7 @@
         @include('includes.company_packages_new')
         @endif
         @endif </div>
+        </div>
     </div>
   </div>
 </div>
