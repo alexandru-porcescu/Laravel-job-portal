@@ -8,7 +8,12 @@
 <!-- Inner Page Title start --> 
 <!-- @include('includes.inner_page_title', ['page_title'=>__($page_title)])  -->
 <!-- Inner Page Title end -->
-
+<style>
+  .userPic img{
+    height: 90px;
+    width: 90px;
+  }
+</style>
 <div class="listpgWraper">
   <div class="container">  
   @include('flash::message')  

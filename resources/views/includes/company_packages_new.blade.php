@@ -4,8 +4,7 @@
 
   <div class="four-plan">
 
-    <h3>{{__('Our Packages')}}</h3>
-
+  <h3 style="color:black">Our Packages</h3>
     <div class="row"> @foreach($packages as $package)
 
       <div class="col-md-4 col-sm-6 col-xs-12">

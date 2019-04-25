@@ -18,7 +18,12 @@
 
 <!-- Inner Page Title end -->
 
-
+<style>
+  .userPic img{
+    height: 90px;
+    width: 90px;
+  }
+</style>
 
 <div class="listpgWraper">
 

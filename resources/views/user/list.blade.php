@@ -31,7 +31,7 @@
           <div class="col-md-9">
             <div class="searchform">
               <div class="row">
-                <div class="col-md-{{((bool)$siteSetting->country_specific_site)? 5:3}}">
+                <div class="col-md-4">
                   <input style="border-radius:0.5em" type="text" name="search" value="{{Request::get('search', '')}}" class="form-control" placeholder="{{__('Enter Skills or job seeker details')}}" />
                 </div>
                 <!-- <div class="col-md-2"> {!! Form::select('functional_area_id[]', ['' => __('Select Functional Area')]+$functionalAreas, Request::get('functional_area_id', null), array('class'=>'form-control', 'id'=>'functional_area_id')) !!} </div> -->
@@ -45,18 +45,18 @@
                 </div>
                 @endif
                 
-                <div class="col-md-3">
-                <span id="state_dd">
-                {!! Form::select('state_id[]', ['' => __('Select State')], Request::get('state_id', null), array('class'=>'form-control search_field', 'id'=>'state_id')) !!}
+                <div class="col-md-4">
+                <span id="state_dd" style="border-radius:0.5em!important">
+                {!! Form::select('state_id[]', ['' => __('Select State')], Request::get('state_id', null), array('class'=>'form-control search_field','style'=>"border-radius:0.5em", 'id'=>'state_id')) !!}
                 </span>
                 </div>
-                <div class="col-md-3">
-                <span id="city_dd">
+                <!-- <div class="col-md-3"> -->
+                <!-- <span id="city_dd">
                 {!! Form::select('city_id[]', ['' => __('Select City')], Request::get('city_id', null), array('class'=>'form-control search_field', 'id'=>'city_id')) !!}
                 </span>
-                </div>
+                </div> -->
                 <div class="col-md-1">
-                  <button type="submit" class="btn"><i class="fa fa-search search_field" aria-hidden="true"></i></button>
+                  <button type="submit" style="border-radius:0.5em" class="btn"><i class="fa fa-search search_field" aria-hidden="true"></i></button>
                 </div>
               </div>
             </div>
@@ -69,7 +69,7 @@
       <!-- Search Result and sidebar start -->
       <div class="row"> @include('includes.job_seeker_list_side_bar')
          
-        <div class="col-md-6 col-sm-12"> 
+        <div class="col-md-9 col-sm-12"> 
           <!-- Search List -->
           <ul class="searchList">
             <!-- job start --> 

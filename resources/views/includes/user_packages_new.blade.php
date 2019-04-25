@@ -4,7 +4,7 @@
 
         <div class="four-plan">
 
-          <h3>Our Packages</h3>
+          <h3 style="color:black">Our Packages</h3>
 
           <div class="row">
 

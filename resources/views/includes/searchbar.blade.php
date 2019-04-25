@@ -22,40 +22,19 @@
 
     <div class="searchbar row">
 
-      <div class="col-md-2" style="padding:0 10px">
+      <div class="col-md-6" style="padding:0 10px">
 
         <input type="text"  name="search" value="{{Request::get('search', '')}}" class="form-control" placeholder="{{__('Freelancer Details')}}" />
 
       </div>
  
 
-      @if((bool)$siteSetting->country_specific_site)
-
-      {!! Form::hidden('country_id[]', Request::get('country_id[]', $siteSetting->default_country_id), array('id'=>'country_id')) !!}
-
-      @else
-
-      <div class="col-md-2" style="padding:0 10px">
-
-      {!! Form::select('country_id[]', ['' => __('Select Country')]+$countries, Request::get('country_id', $siteSetting->default_country_id), array('class'=>'form-control', 'id'=>'country_id')) !!}
-
-      </div>
-
-      @endif
+      
 
       
 
-      <div class="col-md-2" style="padding:0 10px">
-
-      <span id="state_dd">
-
-      {!! Form::select('state_id[]', ['' => __('Select State')], Request::get('state_id', null), array('class'=>'form-control', 'id'=>'state_id')) !!}
-
-      </span>
-
-      </div>
-
-      <div class="col-md-2">
+      
+      <!-- <div class="col-md-2">
 
       <span id="city_dd">
 
@@ -63,7 +42,7 @@
 
       </span>
 
-      </div>
+      </div> -->
 
       <div class="col-md-2" style="padding:0 10px">
 

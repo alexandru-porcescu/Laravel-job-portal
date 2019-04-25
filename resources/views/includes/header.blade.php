@@ -57,13 +57,14 @@
               </li>
               @endif @if(Auth::guard('company')->check())
        
-             <li><a href="{{route('company.messages')}}"><i  style="font-size:150%"  class="fa fa-envelope-o" aria-hidden="true"></i>  </a></li>
-              <li><a href="{{route('company.followers')}}"> <i style="font-size:150%" class="fa fa-user-circle-o" aria-hidden="true"></i>  </a></li>
-              <li><a href="{{ route('post.job') }}"><i style="font-size:150%" class="fa fa-desktop" aria-hidden="true"></i> </a></li>
+             <li><a href="{{route('company.messages')}}"><i  style="font-size:100%"  class="fa fa-envelope-o" aria-hidden="true"></i> {{__('Company Messages')}} </a></li>
+              <li><a href="{{route('company.followers')}}"> <i style="font-size:100%" class="fa fa-user-circle-o" aria-hidden="true"></i>  {{__('Company Followers')}}</a></li>
+              <li><a   href="{{ route('post.job') }}"><i  class="fa fa-desktop" aria-hidden="true"></i> {{__('Post Job')}}</a></li>
                <li class="dropdown userbtn"><a href="">{{Auth::guard('company')->user()->printCompanyImage()}}</a>
                 <ul class="dropdown-menu">
                   <li><a href="{{route('company.home')}}"><i class="fa fa-tachometer" aria-hidden="true"></i> {{__('Dashboard')}}</a> </li>
                   <li><a href="{{ route('company.profile') }}"><i class="fa fa-user" aria-hidden="true"></i> {{__('Company Profile')}}</a></li>
+                  <li><a href="{{ route('company.detail', Auth::guard('company')->user()->slug) }}"><i class="fa fa-user" aria-hidden="true"></i> {{__('Company Public Profile')}}</a></li>
                   <li><a href="{{ route('post.job') }}"><i class="fa fa-desktop" aria-hidden="true"></i> {{__('Post Job')}}</a></li>
                   <li><a href="{{route('company.messages')}}"><i class="fa fa-envelope-o" aria-hidden="true"></i> {{__('Company Messages')}}</a></li>
                   <li><a href="{{ route('company.logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form-header1').submit();">{{__('Logout')}}</a> </li>

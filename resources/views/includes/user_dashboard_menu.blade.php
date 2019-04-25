@@ -1,7 +1,9 @@
 <style>
 	 .tox-progress-content img{
 		/* width:70%; */
-		max-width:85%;
+		max-width:152px;
+		width:152px;
+		height:154px;
 		/* height:90px; */
 		border-radius: 80%;
 		text-align: center;
@@ -46,7 +48,7 @@
 		<h2 style="text-align:center;  ">{{Auth::user()->getName()}}</h2>
 		 
 		 
-		</a>
+		
 		</li>
 		 
 		<?php
@@ -75,7 +77,7 @@
                 <div class="tox-progress-content" data-vcenter="true">
 				{{Auth::user()->printUserImage()}}
                 </div>
-            </div>
+            </div></a>
  			<div style="text-align:center">
 			<button id="reset-button" style="font-family:'Josefin Sans', sans-serif;font-size: 1.4em;margin-top:10px;font-weight:700; " class="btn btn-success" style="padding: 5px 20px"> Your Profile {{$i}}% </button>
 			</div>

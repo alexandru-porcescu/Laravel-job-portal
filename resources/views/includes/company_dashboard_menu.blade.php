@@ -1,8 +1,9 @@
 <style>
 	 .tox-progress-content img{
 		/* width:70%; */
-		max-width:85%;
-		/* height:90px; */
+		max-width:152px;
+		height:154px;
+    width:152px;
 		border-radius: 80%;
 		text-align: center;
 		margin: auto;

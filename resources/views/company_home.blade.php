@@ -10,19 +10,19 @@
 <!-- change code -->
 <!-- @include('includes.inner_page_title', ['page_title'=>__('Dashboard')])  -->
 <!-- Inner Page Title end -->
-
+<style>
+          .instoretxt{
+            background:none;
+          }
+        </style>
 <div class="listpgWraper">
   <div class="container">@include('flash::message')
     <div class="row"> @include('includes.company_dashboard_menu')
       <div class="col-md-9 col-sm-8">
         @include('includes.searchbar')
        <!-- @include('includes.company_dashboard_stats') -->
-        <style>
-          .instoretxt{
-            background:none;
-          }
-        </style>
-        <div style="padding-top:30%; background:none">
+     
+        <div style="padding-top:11%; background:none">
         @php
         $packages = App\Package::where('package_for', 'like', 'employer')->get();
         $package = Auth::guard('company')->user()->getPackage();
@@ -44,7 +44,7 @@
     </div>
   </div>
 </div>
-@include('includes.dashboard_footer')
+@include('includes.footer')
 @endsection
 @push('scripts')
 @include('includes.immediate_available_btn')
