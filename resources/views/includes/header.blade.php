@@ -20,18 +20,18 @@
             @if(Auth::check())
             <ul class="nav navbar-nav">
               <li>
-                <a href="{{ route('my.job.applications') }}" style=" ">{{__('My Job Applications')}}</a>
+                <a href="{{ route('my.job.applications') }}" > <i class="fa fa-desktop" aria-hidden="true"></i> {{__('My Job Applications')}}</a>
 
               </li>
             </ul>
             <ul class="nav navbar-nav">
               <li class=" ">
-                <a href="{{ route('view.public.profile', Auth::user()->id) }}" style=" ">{{__('My Profile')}}</a>
+                <a href="{{ route('view.public.profile', Auth::user()->id) }}" ><i class="fa fa-user" aria-hidden="true"></i> {{__('My Profile')}}</a>
               </li>
             </ul>
             <ul class="nav navbar-nav">
               <li>
-              <a href="{{route('my.messages')}}"><i class="fa fa-envelope-o"  style="color:black" aria-hidden="true"> </i> {{__('Messages')}}</a>
+              <a href="{{route('my.messages')}}"><i class="fa fa-envelope-o" aria-hidden="true"> </i> {{__('Messages')}}</a>
               </li>
          
 

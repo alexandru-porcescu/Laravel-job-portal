@@ -1,9 +1,9 @@
 <style>
   h6{
     border-radius: 50%;
-    width:70%;
+    /* width:70%; */
     margin:auto;
-    padding:12px;
+    padding:29%;
 
     border: 5px solid #c1bfbf!important;
    }
