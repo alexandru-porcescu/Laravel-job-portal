@@ -29,16 +29,29 @@
   @media screen and (max-width: 764px){
     .dash3{
     margin-left:9%;
-  }
+    }
+    .dash2{
+      padding-top:5px!important;
+      padding-bottom:5px!important;
+      text-align:center!important;
+      margin:auto!important;
+    }
+    
+    .dash4{
+      padding-bottom:5px!important;
+      text-align:center!important;
+
+      
+    }
   }
   
   
 </style>
 <ul class="row">
-  <li class="dash col-md-6 col-sm-6 col-xs-6"><h3 style="color:black">Your Messages</h3></li>
-    <li class="dash text-right col-md-5 col-sm-6 col-xs-6"><a href="{{route('my.messages')}}" style="font-weight:800; background-color:#4bdda7;" class="btn btn-success">SEE ALL THE MESSAGES</a></li>
+  <li class="dash col-md-6 col-sm-6 col-xs-12 dash4" ><h3 style="color:black">Your Messages</h3></li>
+  <li class="dash text-right col-md-5 col-sm-6 col-xs-12 dash2"><a href="{{route('my.messages')}}" style="font-weight:800; background-color:#4bdda7;" class="btn btn-success">SEE ALL THE MESSAGES</a></li>
 </ul>
-<ul class="row">
+<ul class="row dash2">
   <li class="dash1 col-md-11 col-sm-6 col-xs-10" style="box-shadow: 3px 2px 8px 5px #bfbfbf">
     @if(Auth::user()->countApplicantMessages())
      <h5 style="font-size:15px; font-weight:500; opacity:0.5">Please check your messages</h5>
