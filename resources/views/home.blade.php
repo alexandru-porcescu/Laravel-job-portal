@@ -4,7 +4,16 @@
 <!-- Header start --> 
 @include('includes.header') 
 <!-- Header end --> 
-
+<style>
+  .container{
+    margin-right:0px;
+  }
+  @media (min-width: 1200px){
+  .container {
+    width: 1370px;
+  }
+  }
+</style>
 <!-- Inner Page Title start --> 
 <!-- @include('includes.inner_page_title', ['page_title'=>__('Dashboard')])  -->
 <!-- Inner Page Title end -->
@@ -12,7 +21,7 @@
 <div class="listpgWraper">
   <div class="container">@include('flash::message')
     <div class="row"> @include('includes.user_dashboard_menu')
-      <div class="col-md-9 col-sm-8"> @include('includes.user_dashboard_stats')
+      <div class="col-md-8 col-sm-7"> @include('includes.user_dashboard_stats')
         @if((bool)config('jobseeker.is_jobseeker_package_active'))
         @php        
         $packages = App\Package::where('package_for', 'like', 'job_seeker')->get();
@@ -31,8 +40,9 @@
         @include('includes.user_packages_new')
         @endif
         @endif
-        @endif </div>
-    </div>
+        @endif 
+      </div> @include('includes.user_dashboard_contact')
+    </div> 
   </div>
 </div>
 @include('includes.footer')

@@ -1,15 +1,15 @@
 <style>
 	 .tox-progress-content img{
 		/* width:70%; */
-		max-width:152px;
-		width:152px;
-		height:154px;
+		max-width:120px;
+		width:112px;
+		height:113px;
 		/* height:90px; */
 		border-radius: 80%;
 		text-align: center;
 		margin: auto;
 		justify-content: center;
-		margin-top: 12px;
+		margin-top: 8px;
 		 
 		
  	}
@@ -17,10 +17,14 @@
 		text-align:center;
 	 }
 	  
+	#reset-button:hover{
+		cursor: pointer!important;
+		font-weight:900!important;
+	}
 </style>
-<div class="col-md-3 col-sm-4">
+<div class="col-md-2 col-sm-3" style="background:white; padding:13px;border-radius:0.5em;;box-shadow:1px 1px 1px 2px #d3dada;">  
 
-	<div class="switchbox">
+	<div class="switchbox" style="padding:10px">
 
 		<div class="txtlbl">{{__('Immediate Available')}} <i class="fa fa-info-circle" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="{{__('Are you immediate available')}}?" data-original-title="{{__('Are you immediate available')}}?" title="{{__('Are you immediate available')}}?"></i>
 		</div>
@@ -71,15 +75,15 @@
 								 
 									
 		?>
-		<div class="col-md-25 col-sm-50 "  >
-            <div style="margin: auto" class="tox-progress" data-size="180" data-thickness="12" data-color="#229922"
+		<div class="col-md-15 col-sm-30 "  >
+            <div style="margin: auto" class="tox-progress" data-size="130" data-thickness="8" data-color="#229922"
                  data-background="#ffffff" data-progress="{{$i}}" data-speed="2000">
                 <div class="tox-progress-content" data-vcenter="true">
 				{{Auth::user()->printUserImage()}}
                 </div>
             </div></a>
  			<div style="text-align:center">
-			<button id="reset-button" style="font-family:'Josefin Sans', sans-serif;font-size: 1.4em;margin-top:10px;font-weight:700; " class="btn btn-success" style="padding: 5px 20px"> Your Profile {{$i}}% </button>
+			 <p id="reset-button" sytle="font-weight: 900;">Your Profile {{$i}}% </p>  
 			</div>
 		</div>
 				 
@@ -87,7 +91,7 @@
 
 		<li>
 			<a class="" href="{{url('my-profile#cvs')}}">
-			<p style="text-align:center; color:red"> Current CSV Counts</p>
+			<p style="text-align:center; color:red;font-weight:800"> Current CSV Counts</p>
 			<h1 style="text-align:center;color:red">{{ Auth::user()->countProfileCvs() }}</h1></a>
 		</li>
 	
@@ -95,8 +99,8 @@
 		</li>
 
 		 <li>
-		<p sytle="    padding: 0 10px">To access the requests for proposals, you must fill the following information in your company's profile:</p> 
-		<p>- description of the proposed services<br>
+		<p sytle="padding: 0 10px; text-align:right">To access the requests for proposals, you must fill the following information in your company's profile:</p> 
+		<p  style="text-align:left; padding:20px">- description of the proposed services<br>
 		- city<br>
 		- skills (5 minimum)<br>
 		- on site / remote work <br>
@@ -104,7 +108,7 @@
 		- fields of expertise <br></p>
 		 </li>
 
-		<li><a class="btn btn-success btn-lg" style="background-color:#4bdda7;" href="{{ route('my.profile') }}"><i class="fa fa-user" aria-hidden="true"></i> {{__('My Profile')}}</a>
+		<li style="padding:10px"><a class="btn btn-success btn-lg" style="background-color:#4bdda7;" href="{{ route('my.profile') }}"><i class="fa fa-user" aria-hidden="true"></i> {{__('My Profile')}}</a>
 		</li>
 
 	 
@@ -112,13 +116,13 @@
 
 
 
-		<li><a class="btn btn-success btn-lg" style="background-color:#4bdda7;" href="{{ route('my.favourite.jobs') }}"><i class="fa fa-heart" aria-hidden="true"></i> {{__('My Favourite Jobs')}}</a>
+		<li style="padding:10px"><a class="btn btn-success btn-lg" style="background-color:#4bdda7;" href="{{ route('my.favourite.jobs') }}"><i class="fa fa-heart" aria-hidden="true"></i> Favor Job</a>
 		</li>
 
 
 
 		 
-		<li ><a class="btn btn-success btn-lg" style="background-color:#4bdda7;"   href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out" aria-hidden="true"></i> {{__('Logout')}}</a>
+		<li style="padding:10px"><a class="btn btn-success btn-lg" style="background-color:#4bdda7;"   href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out" aria-hidden="true"></i> {{__('Logout')}}</a>
 
 			<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 

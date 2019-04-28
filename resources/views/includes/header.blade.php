@@ -29,6 +29,13 @@
                 <a href="{{ route('view.public.profile', Auth::user()->id) }}" style=" ">{{__('My Profile')}}</a>
               </li>
             </ul>
+            <ul class="nav navbar-nav">
+              <li>
+              <a href="{{route('my.messages')}}"><i class="fa fa-envelope-o"  style="color:black" aria-hidden="true"> </i> {{__('Messages')}}</a>
+              </li>
+         
+
+            </ul>
              
             <!-- <ul class="nav navbar-nav">
               <li class=" ">

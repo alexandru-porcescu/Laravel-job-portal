@@ -3323,9 +3323,7 @@ blockquote:after {
 	border-bottom: 1px solid #eee;
 }
 .usernavdash li a:hover {
-	background-color: green;
-	color: rgba(255, 255, 255 );
-	text-decoration: none;
+   	text-decoration: none;
 }
 .usernavdash li i {
 	margin-right: 2px;
