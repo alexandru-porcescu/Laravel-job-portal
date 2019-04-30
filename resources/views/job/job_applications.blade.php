@@ -16,7 +16,7 @@
       
       <div class="col-md-9 col-sm-8"> 
         <div class="myads">
-          <h2>{{__('Job Applications')}}</h2>
+          <h3 style="color:black">{{__('Job Applications')}}</h3>
           <ul class="searchList">
             <!-- job start --> 
             @if(isset($job_applications) && count($job_applications))

@@ -20,9 +20,13 @@
             @if(Auth::check())
             <ul class="nav navbar-nav">
               <li>
-                <a href="{{ route('my.job.applications') }}" > <i class="fa fa-desktop" aria-hidden="true"></i> {{__('My Job Applications')}}</a>
-
+              <a href="{{route('job.list', ['is_featured'=>1])}}"><i class="fa fa-bullseye" aria-hidden="true"></i> {{__('Mission')}}</a> 
               </li>
+            </ul>
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="{{ route('my.job.applications') }}" > <i class="fa fa-desktop" aria-hidden="true"></i> {{__('My Job Applications')}}</a>
+              </li> 
             </ul>
             <ul class="nav navbar-nav">
               <li class=" ">

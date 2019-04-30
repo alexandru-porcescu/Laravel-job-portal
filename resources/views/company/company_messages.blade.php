@@ -14,7 +14,7 @@
   <div class="row"> @include('includes.company_dashboard_menu')
     <div class="col-md-9 col-sm-8">
       <div class="myads">
-        <h2>{{__('Company Messages')}}</h2>
+        <h2 style="color:black">{{__('Company Messages')}}</h2>
         <ul class="searchList">
           <!-- job start --> 
           @if(isset($messages) && count($messages))

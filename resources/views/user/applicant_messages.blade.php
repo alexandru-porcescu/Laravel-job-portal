@@ -14,7 +14,7 @@
   <!-- <div class="row"> @include('includes.user_dashboard_menu') -->
     <div class="col-md-12 col-sm-12">
       <div class="myads">
-        <h2>{{__('My Messages')}}</h2>
+        <h3 style="color:black">{{__('My Messages')}}</h3>
         <ul class="searchList">
           <!-- job start --> 
           @if(isset($messages) && count($messages))

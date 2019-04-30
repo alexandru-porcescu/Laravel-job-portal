@@ -169,7 +169,7 @@ class CompanyController extends Controller
             'subject' => 'required|max:200',
             'message' => 'required',
             'to_id' => 'required',
-            'g-recaptcha-response' => 'required|captcha',
+            'g-recaptcha-response' => 'required',
         );
         $rules_messages = array(
             'from_name.required' => __('Name is required'),

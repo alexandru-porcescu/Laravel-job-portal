@@ -90,9 +90,15 @@
                                     @if ($errors->has('message_txt')) <span class="help-block"> <strong>{{ $errors->first('message_txt') }}</strong> </span> @endif
                                 </div>
                                 <div class="col-md-12{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
-                                    {!! app('captcha')->display() !!}
-                                    @if ($errors->has('g-recaptcha-response')) <span class="help-block"> <strong>{{ $errors->first('g-recaptcha-response') }}</strong> </span> @endif
-                                </div>
+    
+                                    <div class="g-recaptcha" data-sitekey={{env('CAPTCHA_KEY')}}></div>
+                                    @if($errors->has('g-recaptcha-response'))
+                                    <span class="invalid-feedback" style="display:block">
+                                        <strong>{{$errors->first('g-recaptcha-response')}}</strong>
+                                    </span>
+                                    @endif
+
+                               </div>
 
                                 <div class="col-md-12">
                                     <button title="" class="button" type="submit" id="submit">{{__('Submit Now')}}</button>

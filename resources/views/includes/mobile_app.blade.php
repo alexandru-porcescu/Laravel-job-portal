@@ -10,7 +10,7 @@
         <!--app info Start-->
         <div class="titleTop">
           <div class="subtitle">{{__('Step Forword Now')}}</div>
-          <h3>{{__('The Jobee APP')}}</h3>
+          <h3 style="color:black">{{__('The Jobee APP')}}</h3>
         </div>
         <div class="subtitle2">{{__('A world of oppertunity in your hand')}}</div>
         <p>{{__('Aliquam vestibulum cursus felis. In iaculis iaculis sapien ac condimentum. Vestibulum congue posuere lacus, id tincidunt nisi porta sit amet. Suspendisse et sapien varius, pellentesque dui non, semper orci. Curabitur blandit, diam ut ornare ultricies')}}.</p>

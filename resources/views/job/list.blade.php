@@ -38,11 +38,11 @@
 
           @if(Auth::guard('company')->check())
 
-          <a href="{{ route('post.job') }}" class="btn"><i class="fa fa-file-text" aria-hidden="true"></i> {{__('Post Job')}}</a>
+          <a style="border-radius:0.5em" href="{{ route('post.job') }}" class="btn"><i class="fa fa-file-text" aria-hidden="true"></i> {{__('Post Job')}}</a>
 
           @else
 
-          <a href="{{url('my-profile#cvs')}}" class="btn"><i class="fa fa-file-text" aria-hidden="true"></i> {{__('Upload Your Resume')}}</a>
+          <a style="border-radius:0.5em" href="{{url('my-profile#cvs')}}" class="btn"><i class="fa fa-file-text" aria-hidden="true"></i> {{__('Upload Your Resume')}}</a>
 
           @endif
 
@@ -56,13 +56,13 @@
 
               <div class="row">
 
-                <div class="col-md-{{((bool)$siteSetting->country_specific_site)? 5:3}}">
+                <div class="col-md-{{((bool)$siteSetting->country_specific_site)? 7:5}}">
 
                   <input type="text" name="search" value="{{Request::get('search', '')}}" class="form-control" placeholder="{{__('Enter Skills or job title')}}" />
 
                 </div>
 
-                <div class="col-md-2"> {!! Form::select('functional_area_id[]', ['' => __('Select Functional Area')]+$functionalAreas, Request::get('functional_area_id', null), array('class'=>'form-control', 'id'=>'functional_area_id')) !!} </div>
+                <!-- <div class="col-md-2"> {!! Form::select('functional_area_id[]', ['' => __('Select Functional Area')]+$functionalAreas, Request::get('functional_area_id', null), array('class'=>'form-control', 'id'=>'functional_area_id')) !!} </div> -->
 
                 
 
@@ -106,7 +106,7 @@
 
                 <div class="col-md-1">
 
-                  <button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+                  <button style="border-radius:0.5em" type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i></button>
 
                 </div>
 

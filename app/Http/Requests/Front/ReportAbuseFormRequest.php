@@ -28,7 +28,8 @@ class ReportAbuseFormRequest extends Request
             'your_name' => 'required|max:100',
             'your_email' => 'required|email|max:100',
             'job_url' => 'required|url|max:230',
-            'g-recaptcha-response' => 'required|captcha',
+            // 'g-recaptcha-response' => 'required|captcha',
+            'g-recaptcha-response' => 'required',
         ];
     }
 
