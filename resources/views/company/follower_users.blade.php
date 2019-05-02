@@ -12,9 +12,9 @@
 <div class="listpgWraper">
   <div class="container">
     <div class="row">
-      @include('includes.company_dashboard_menu')
+      <!-- @include('includes.company_dashboard_menu') -->
       
-      <div class="col-md-9 col-sm-8"> 
+      <div class="col-md-12 col-sm-12"> 
         <div class="myads">
           <h2>{{__('Company Followers')}}</h2>
           <ul class="searchList">

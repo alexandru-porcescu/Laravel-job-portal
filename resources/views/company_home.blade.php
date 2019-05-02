@@ -19,6 +19,7 @@
   <div class="container">@include('flash::message')
     <div class="row"> @include('includes.company_dashboard_menu')
       <div class="col-md-9 col-sm-8">
+        @include('includes.company_dashboard_stats')
         @include('includes.searchbar')
        <!-- @include('includes.company_dashboard_stats') -->
      

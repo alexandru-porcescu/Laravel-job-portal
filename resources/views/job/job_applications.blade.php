@@ -12,9 +12,9 @@
 <div class="listpgWraper">
   <div class="container">
     <div class="row">
-      @include('includes.company_dashboard_menu')
+      <!-- @include('includes.company_dashboard_menu') -->
       
-      <div class="col-md-9 col-sm-8"> 
+      <div class="col-md-12 col-sm-12"> 
         <div class="myads">
           <h3 style="color:black">{{__('Job Applications')}}</h3>
           <ul class="searchList">

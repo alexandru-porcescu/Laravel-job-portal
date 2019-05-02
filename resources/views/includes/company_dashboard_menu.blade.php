@@ -64,7 +64,8 @@
         </div>
       <li><a class="btn btn-info" href="{{ route('company.profile') }}"><i class="fa fa-user" aria-hidden="true"></i> {{__('Company Profile')}}</a></li>
        <li><a href="{{ route('post.job') }}" class="btn btn-info"><i class="fa fa-desktop"  aria-hidden="true"></i> {{__('Post Job')}}</a></li>
-       
+       <li><a href="{{ route('posted.jobs') }}" class="btn btn-info"><i class="fa fa-desktop" aria-hidden="true"></i> {{__('Company Jobs')}}</a></li>
+       <li><a href="{{route('company.followers')}}" class="btn btn-info"><i class="fa fa-user-o" aria-hidden="true"></i> {{__('Company Followers')}}</a></li>
         <li><a href="{{ route('company.logout') }}" class="btn btn-info" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out" aria-hidden="true"></i> {{__('Logout')}}</a>
       <form id="logout-form" action="{{ route('company.logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
       </li>
